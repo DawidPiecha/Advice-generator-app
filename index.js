@@ -1,23 +1,24 @@
-import { fetchRandomAdvice } from "./adviceApi";
-
-const updateAdvice = (id, advice) => {
-  const adviceNumber = document.querySelector(".container__heading--number");
-  const adviceText = document.querySelector(".container__advice");
-
-  adviceNumber.textContent = id;
-  adviceText.textContent = advice;
+const fetchRandomAdvice = async () => {
+  try {
+    const response = await fetch("https://api.adviceslip.com/advice");
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching advice:", error);
+    throw error;
+  }
 };
 
+const adviceNumber = document.querySelector(".container__heading--number");
+const adviceText = document.querySelector(".container__advice");
 const button = document.querySelector(".lower-container__button");
 
 const handleButtonClick = async () => {
   try {
     const adviceData = await fetchRandomAdvice();
-    console.log(adviceData);
 
-    const { id, advice } = adviceData.slip;
-
-    updateAdvice(id, advice);
+    adviceNumber.textContent = adviceData.slip.id;
+    adviceText.textContent = adviceData.slip.advice;
   } catch (error) {
     console.error("getting advice error:", error);
   }
