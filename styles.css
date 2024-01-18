@@ -1,0 +1,88 @@
+:root {
+  --first: hsl(193, 38%, 86%);
+  --second: hsl(150, 100%, 66%);
+  --third: hsl(217, 19%, 38%);
+  --fourth: hsl(217, 19%, 24%);
+  --fifth: hsl(218, 23%, 16%);
+}
+svg {
+  display: block;
+}
+
+body {
+  background-color: var(--fifth);
+  margin: 0;
+  height: 100vh;
+  font-family: Manrope, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 350px;
+  background-color: var(--fourth);
+  padding: 45px;
+  border-radius: 18px;
+  row-gap: 20px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--first);
+  flex: 5;
+}
+.container__heading {
+  color: var(--second);
+  letter-spacing: 4px;
+  font-size: 12px;
+}
+.container__advice {
+  font-size: 22px;
+  color: var(--second);
+}
+.lower-container {
+  flex: 1;
+}
+.lower-container__button {
+  position: absolute;
+  bottom: -25px;
+  left: 170px;
+  background-color: var(--second);
+  border: none;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.lower-container__button:hover {
+  box-shadow: 0 0 10px hsl(150, 100%, 66%);
+}
+.lower-container__button:active {
+  transform: scale(0.92);
+}
+
+.attribution {
+  position: absolute;
+  bottom: 30px;
+  left: 37%;
+  color: var(--first);
+}
+.attribution a {
+  text-decoration: none;
+  color: var(--first);
+  font-weight: 800;
+  font-size: 22px;
+}
+.attribution a:hover {
+  color: var(--second);
+}

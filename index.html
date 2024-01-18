@@ -1,28 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <title>Frontend Mentor | Advice generator app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+      integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+      <div class="main-wrapper">
+        <div class="container">
+          <p class="container__heading">
+            ADVICE # <span class="container__heading--number"></span>
+          </p>
+          <p class="container__advice"></p>
+        </div>
+        <div class="lower-container">
+          <button
+            type="button"
+            class="lower-container__button"
+            aria-label="button"
+          >
+            <svg width="25" height="25">
+              <image
+                class="lower-container__icon"
+                href="./images/icon-dice.svg"
+                width="25"
+                height="25"
+              ></image>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </main>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Advice generator app</title>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://github.com/DawidPiecha">DawidPiecha</a>.
+      </div>
+    </footer>
+  </body>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Advice #<!-- Advice ID goes here -->
-
-  "<!-- Advice text goes here -->"
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+  <script type="module" src="./index.js"></script>
 </html>
