@@ -12,10 +12,14 @@ const fetchRandomAdvice = async () => {
 const adviceNumber = document.querySelector(".container__heading--number");
 const adviceText = document.querySelector(".container__advice");
 const button = document.querySelector(".lower-container__button");
+const heading = document.querySelector(".container__heading");
+const welcome = document.querySelector(".container__welcome");
 
 const handleButtonClick = async () => {
   try {
     const adviceData = await fetchRandomAdvice();
+    welcome.classList.add("hidden");
+    heading.classList.remove("hidden");
 
     adviceNumber.textContent = adviceData.slip.id;
     adviceText.textContent = adviceData.slip.advice;
